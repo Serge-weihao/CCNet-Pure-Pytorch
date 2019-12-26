@@ -31,6 +31,7 @@ $ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--c
 ```
 ## Training and Evaluation
 ```bash
+$  export CUDA_VISIBLE_DEVICES=0,1,2,3
 $ python train.py --data-dir /data/datasets/Cityscapes/ --random-mirror --random-scale --restore-from ./dataset/resnet101-imagenet.pth --gpu 0,1,2,3 --learning-rate 0.01 --input-size 769,769 --weight-decay 0.0001 --batch-size 4 --num-steps 60000 --recurrence 2 --ohem 1 --ohem-thres 0.7 --ohem-keep 100000 --model ccnet
 
 
