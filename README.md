@@ -5,3 +5,5 @@ I unofficially re-implement [CCNet: Criss-Cross Attention for Semantic Segmentat
 ## My Operation and Performances
 Previous Criss-Cross Attention projects are using a Cuda extension for Pytorch. Here I design a more elegant pure Pytorch implementation for Criss-Cross Attention in [CC.py]. To check the correctness and compare with CUDA [cc_attention](https://github.com/speedinghzl/CCNet) of the official one, run the [check.py].
 
+To check the correctness, I check my pure pytorch CC() and the official CUDA CrissCross(), the inputs are Q, K and V, respectively.
+![Input](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/1.PNG)
