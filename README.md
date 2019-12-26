@@ -9,5 +9,7 @@ To check the correctness, I check my pure pytorch CC() and the official CUDA Cri
 ![Input](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/1.PNG)<br>
 The theoretical output should be 3. The output of our CC() is <br>
 ![CC](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/2.PNG)<br>
-The output of official CUDA CrissCross() is <br>
+But the output of official CUDA CrissCross() is not exactly 3<br>
 ![CUDA](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/3.PNG)<br>
+Then I check the gradient, the theoretical gradient of z is 1. Gradient of CC() is excatly 1, but gradient of CUDA CrissCross() is 0.9999998212. <br>
+![g](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/4.PNG)<br>
