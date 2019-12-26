@@ -41,3 +41,10 @@ $ python evaluate.py --data-dir /data/datasets/Cityscapes/  --recurrence 2 --mod
 ```
 ## Dataset
 I implement this on [CityScapes](https://www.cityscapes-dataset.com/) dataset.
+## Thanks to the Third Party Libs
+[CCNet: Criss-Cross Attention for Semantic Segmentation](https://github.com/speedinghzl/CCNet)
+[Synchronized-BatchNorm-PyTorch](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch)
+
+## To do
+
+- [ ] Implement Inplace-abn in pure Pytorch.
