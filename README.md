@@ -20,3 +20,11 @@ For better compatibility under different versions and environments, I decide to 
 ## Requirements
 If you do not want to compare our implementation with the Cuda version, you just need Python 3, Pytorch 1.2 or 0.4, OpenCV and PIL.
 If you want to compare our implementation with the Cuda version, you need Pytorch 1.1 or 1.2 and apex.
+```bash
+# Install **Pytorch-1.1**
+$ conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
+
+# Install **Apex**
+$ git clone https://github.com/NVIDIA/apex
+$ cd apex
+$ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
