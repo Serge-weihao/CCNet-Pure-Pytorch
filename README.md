@@ -18,7 +18,7 @@ As for the speed of tranning and testing, I compare my Pytorch Criss-Cross Atten
 For better compatibility under different versions and environments, I decide to use pure Pytorch implementation without using  Cuda [inplace-abn](https://github.com/mapillary/inplace_abn). I adopt [Synchronized-BatchNorm-PyTorch
 ](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch), so it costs more GPU memory than inplace-abn. And I will try to realize a efficient inplace-abn in the future.<br>
 ## Requirements
-If you do not want to compare our implementation with the Cuda version, you just need Python 3, Pytorch 1.2 or 0.4, OpenCV and PIL.
+If you do not want to compare our implementation with the Cuda version, you just need Python 3, Pytorch 1.2 or 0.4, OpenCV and PIL.<br>
 If you want to compare our implementation with the Cuda version, you need Pytorch 1.1 or 1.2 and apex.
 ```bash
 # Install **Pytorch-1.1**
