@@ -16,4 +16,6 @@ Then I check the gradient, the theoretical gradient of z is 1. Gradient of CC() 
 As for the speed of tranning and testing, I compare my Pytorch Criss-Cross Attention and the official CUDA Criss-Cross Attention in this project. For batch size 4 at 4 2080Ti with Ohem,  my Pytorch Criss-Cross Attention costs 14m32s, and the official CUDA Criss-Cross Attention costs 15m22s on Cityscapes trainning set. For evaluation with batch size 1 at 1 2080Ti using single scale, my Pytorch Criss-Cross Attention costs 28m44s, and the official CUDA Criss-Cross Attention costs 30m59s on Cityscapes val set.<br>
 ### SynBN
 For better compatibility under different versions and environments, I decide to use pure Pytorch implementation without using  Cuda [inplace-abn](https://github.com/mapillary/inplace_abn). I adopt [Synchronized-BatchNorm-PyTorch
-](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch), so it may cost more the GPU memory than inplace-abn. And I will try to realize a efficient inplace-abn in the future.<br>
+](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch), so it costs more GPU memory than inplace-abn. And I will try to realize a efficient inplace-abn in the future.<br>
+## Requirements
+If you do not warn to compare our implementation with the Cuda version, you just need Python 3, Pytorch 1.2 or 0.4, OpenCV and PIL.
