@@ -13,3 +13,6 @@ But the output of official CUDA CrissCross() is not exactly 3<br><br>
 ![CUDA](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/3.PNG)<br>
 Then I check the gradient, the theoretical gradient of z is 1. Gradient of CC() is excatly 1, but gradient of CUDA CrissCross() is 0.9999998212. <br><br>
 ![g](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/4.PNG)<br>
+As for the speed of tranning and testing, I compare my Pytorch Criss-Cross Attention and the official CUDA Criss-Cross Attention in  
+###SynBN
+For better compatibility under different versions and environments, I decide to use pure Pytorch implementation
