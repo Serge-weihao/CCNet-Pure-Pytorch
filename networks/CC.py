@@ -38,22 +38,7 @@ class CC_module(nn.Module):
         #print(out_H.size(),out_W.size())
         return self.gamma*(out_H + out_W) + x
 
-class CC_decoder(nn.Module): 
-    def __init__(self,in_dim,nclass):
-        super(CC_decoder, self).__init__()
-        self.cc1=CC_module(in_dim)
-        #self.cc2=CC_module(in_dim)
-        self.head = nn.Sequential(nn.Conv2d(in_channels=in_dim*2, out_channels=32, kernel_size=3,padding=1, bias=False),nn.BatchNorm2d(32)
-                 ,nn.ReLU(inplace=True),
-                 nn.Conv2d(32, nclass, kernel_size=1, stride=1, padding=0, bias=True))
-    
-    def forward(self, x):
-         
-         a = self.cc1(x)
-         a = self.cc1(a)
-         out = torch.cat([a, x], 1)
-         out = self.head(out)
-         return out
+
 
 if __name__ == '__main__':
     model = CC_module(64)
