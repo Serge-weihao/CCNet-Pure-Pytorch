@@ -20,7 +20,7 @@ Our pure Pytorch implementation ([CC.py](https://github.com/Serge-weihao/CCNet-P
 For better compatibility under different versions and environments, I decide to use pure Pytorch implementation without using  Cuda [inplace-abn](https://github.com/mapillary/inplace_abn). I adopt [Synchronized-BatchNorm-PyTorch
 ](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch), so it costs more GPU memory than inplace-abn. And I will try to realize an efficient inplace-abn in the future.<br>
 ## Requirements
-CUDA extension is not necessary.
+CUDA extension is not necessary.<br>
 If you do not want to compare our implementation with the Cuda version, you just need Python 3, Pytorch 1.2 or 0.4, OpenCV and PIL.<br>
 If you want to compare our implementation with the Cuda version, you need Pytorch 1.1 or 1.2 and apex.
 ```bash
