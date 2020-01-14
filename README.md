@@ -15,6 +15,11 @@ But the output of official CUDA CrissCross() is not exactly 3<br><br>
 Then I check the gradient, the theoretical gradient of z is 1. Gradient of CC() is excatly 1, but gradient of CUDA CrissCross() is 0.9999998212. <br><br>
 ![g](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/4.PNG)<br>
 As for the speed of tranning and testing, I compare my Pytorch Criss-Cross Attention and the official CUDA Criss-Cross Attention in this project. For batch size 4 at 4 2080Ti with Ohem,  my Pytorch Criss-Cross Attention costs 14m32s, and the official CUDA Criss-Cross Attention costs 15m22s on Cityscapes trainning set. For evaluation with batch size 1 at 1 2080Ti using single scale, my Pytorch Criss-Cross Attention costs 28m44s, and the official CUDA Criss-Cross Attention costs 30m59s on Cityscapes val set.<br>
+Evaluatations for a same CKPT in single scale by my pure pytorch implementation and official cc_attention.<br>
+My module<br>
+![em](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/mycc.PNG)<br>
+Official CUDA cc_attention<br>
+![ec](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/Fig/rcuda.PNG)<br>
 Our pure Pytorch implementation ([CC.py](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/networks/CC.py)) is faster and more precise, as well as more compatibale.
 ### SynBN
 For better compatibility under different versions and environments, I decide to use pure Pytorch implementation without using  Cuda [inplace-abn](https://github.com/mapillary/inplace_abn). I adopt [Synchronized-BatchNorm-PyTorch
