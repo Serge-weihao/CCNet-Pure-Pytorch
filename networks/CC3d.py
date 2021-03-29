@@ -15,7 +15,7 @@ def INF3DW(B, H, W, D):
 def INF3DD(B, H, W, D):
     return -torch.diag(torch.tensor(float("inf")).repeat(D),0).unsqueeze(0).repeat(B*H*W,1,1)#.cuda()
 class CrissCrossAttention3D(nn.Module):
-    """ Criss-Cross Attention Module 3D version, inspired by the 2d version, but 3D CC Module should mask out the overlaped elements twice!"""
+    """ Criss-Cross Attention Module 3D version, inspired by the 2d version, but 3D CC Module should mask out the overlapped elements twice!"""
     def __init__(self, in_dim, verbose = False):
         super(CrissCrossAttention3D,self).__init__()
         self.query_conv = nn.Conv3d(in_channels=in_dim, out_channels=in_dim//8, kernel_size=1)
@@ -98,7 +98,7 @@ class CrissCrossAttention3D(nn.Module):
         return self.gamma*(out_H + out_W + out_D) + x
 
 class CrissCrossAttention3D1(nn.Module):
-    """ Criss-Cross Attention Module 3D version, inspired by the 2d version, but 3D CC Module should mask out the overlaped elements twice"""
+    """ Criss-Cross Attention Module 3D version, inspired by the 2d version, but 3D CC Module should mask out the overlapped elements twice"""
     def __init__(self, in_dim, verbose = False):
         super(CrissCrossAttention3D1,self).__init__()
         self.query_conv = nn.Conv3d(in_channels=in_dim, out_channels=in_dim//8, kernel_size=1)
@@ -180,7 +180,7 @@ class CrissCrossAttention3D1(nn.Module):
         return self.gamma*(out_H + out_W + out_D) + x
 
 class CrissCrossAttention3D2(nn.Module):
-    """ Criss-Cross Attention Module 3D version, inspired by the 2d version, but 3D CC Module should mask out the overlaped elements twice"""
+    """ Criss-Cross Attention Module 3D version, inspired by the 2d version, but 3D CC Module should mask out the overlapped elements twice"""
     def __init__(self, in_dim, verbose = False):
         super(CrissCrossAttention3D2,self).__init__()
         self.query_conv = nn.Conv3d(in_channels=in_dim, out_channels=in_dim//8, kernel_size=1)
