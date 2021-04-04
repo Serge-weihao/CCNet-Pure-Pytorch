@@ -1,5 +1,5 @@
 # CCNet-Pure-Pytorch
-Criss-Cross Attention for Semantic Segmentation in pure Pytorch with a faster and more precise implementation.
+Criss-Cross Attention (2d&3d) for Semantic Segmentation in pure Pytorch with a faster and more precise implementation.
 ### Updates
 
 ****2021/03: Three kinds of pure-pytorch implementation of 3D CCNet Module is released in [CC3d.py](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/networks/CC3d.py). And you can check their correctness in [check3dby2d.py](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/cc_attention/check3dby2d.py) and [check3d.py](https://github.com/Serge-weihao/CCNet-Pure-Pytorch/blob/master/cc_attention/check3d.py)
